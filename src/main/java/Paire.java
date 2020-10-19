@@ -20,4 +20,9 @@ public class Paire<A, B>{
         return new Paire<>(fst, val);
     }
 
+    @Override
+    public String toString() {
+        return String.format("(%s; %s) :: Paire[%s,%s]",
+                fst, snd, fst.getClass().getSimpleName(), snd.getClass().getSimpleName());
+    }
 }
