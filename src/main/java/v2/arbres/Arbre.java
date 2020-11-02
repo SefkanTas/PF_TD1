@@ -1,10 +1,10 @@
-package arbres;
+package v2.arbres;
 
 import java.util.Set;
 
 public interface Arbre {
     int taille();
-    boolean contient (final Integer val);
+    boolean contient(final Integer val);
     Set<Integer> valeurs();
     Integer somme();
     Integer min();

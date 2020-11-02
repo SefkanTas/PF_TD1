@@ -1,3 +1,5 @@
+package v1;
+
 public class Paire<A, B>{
 
     private final A fst;
@@ -22,7 +24,7 @@ public class Paire<A, B>{
 
     @Override
     public String toString() {
-        return String.format("(%s; %s) :: Paire[%s,%s]",
+        return String.format("(%s; %s) :: v1.Paire[%s,%s]",
                 fst, snd, fst.getClass().getSimpleName(), snd.getClass().getSimpleName());
     }
 }

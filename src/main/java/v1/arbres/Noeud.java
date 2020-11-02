@@ -1,4 +1,4 @@
-package arbres;
+package v1.arbres;
 
 import java.util.ArrayList;
 import java.util.List;

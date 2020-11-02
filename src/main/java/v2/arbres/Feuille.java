@@ -1,12 +1,12 @@
-package arbres;
+package v2.arbres;
 
 import java.util.Set;
 
-public class Feuille implements Arbre{
+public class Feuille implements Arbre {
 
     private final int valeur;
 
-    public Feuille(final int valeur){
+    public Feuille(final int valeur) {
         this.valeur = valeur;
     }
 
@@ -16,32 +16,36 @@ public class Feuille implements Arbre{
     }
 
     @Override
-    public boolean contient(Integer val) {
+    public boolean contient(final Integer val) {
         return val.equals(valeur);
     }
 
     @Override
     public Set<Integer> valeurs() {
-        return null;
+        return Set.of(valeur);
     }
 
     @Override
     public Integer somme() {
-        return null;
+        return valeur;
     }
 
     @Override
     public Integer min() {
-        return null;
+        return valeur;
     }
 
     @Override
     public Integer max() {
-        return null;
+        return valeur;
     }
 
+    /**
+     * une feuille est toujours triée.
+     */
     @Override
     public boolean estTrie() {
-        return false;
+        return true;
     }
+    
 }
