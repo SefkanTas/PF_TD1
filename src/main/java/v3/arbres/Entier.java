@@ -2,7 +2,7 @@ package v3.arbres;
 
 import java.util.Objects;
 
-public class Entier implements Sommable<Chaine>, Comparable<Chaine> {
+public class Entier implements Sommable<Entier>, Comparable<Entier> {
 
     Integer value;
 
@@ -11,14 +11,14 @@ public class Entier implements Sommable<Chaine>, Comparable<Chaine> {
     }
 
     @Override
-    public Chaine sommer(Chaine other) {
+    public Entier sommer(Entier other) {
 
-        return new Chaine(this.value + other.value);
+        return new Entier(this.value + other.value);
     }
 
     @Override
-    public int compareTo(Chaine o) {
-        return 0;
+    public int compareTo(Entier o) {
+        return value.compareTo(o.value);
     }
 
     @Override

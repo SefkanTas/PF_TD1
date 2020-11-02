@@ -4,9 +4,9 @@ import java.util.Objects;
 
 public class Chaine implements Sommable<Chaine>, Comparable<Chaine> {
 
-    Integer value;
+    String value;
 
-    public Chaine(Integer value) {
+    public Chaine(String value) {
         this.value = value;
     }
 
@@ -18,7 +18,7 @@ public class Chaine implements Sommable<Chaine>, Comparable<Chaine> {
 
     @Override
     public int compareTo(Chaine o) {
-        return 0;
+        return value.compareTo(o.value);
     }
 
     @Override
