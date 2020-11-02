@@ -2,11 +2,11 @@ package v3.arbres;
 
 import java.util.Set;
 
-public class Feuille implements Arbre {
+public class Feuille<T> implements Arbre<T>, Sommable<T> {
 
-    private final int valeur;
+    private final T valeur;
 
-    public Feuille(final int valeur) {
+    public Feuille(final T valeur) {
         this.valeur = valeur;
     }
 
@@ -16,36 +16,18 @@ public class Feuille implements Arbre {
     }
 
     @Override
-    public boolean contient(final Integer val) {
+    public boolean contient(final T val) {
         return val.equals(valeur);
     }
 
     @Override
-    public Set<Integer> valeurs() {
+    public Set<T> valeurs() {
         return Set.of(valeur);
     }
 
     @Override
-    public Integer somme() {
-        return valeur;
-    }
-
-    @Override
-    public Integer min() {
-        return valeur;
-    }
-
-    @Override
-    public Integer max() {
-        return valeur;
-    }
-
-    /**
-     * une feuille est toujours triée.
-     */
-    @Override
-    public boolean estTrie() {
-        return true;
+    public T sommer(T other) {
+        return this.sommer(other);
     }
     
 }

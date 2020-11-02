@@ -2,12 +2,8 @@ package v3.arbres;
 
 import java.util.Set;
 
-public interface Arbre {
+public interface Arbre<T> {
     int taille();
-    boolean contient(final Integer val);
-    Set<Integer> valeurs();
-    Integer somme();
-    Integer min();
-    Integer max();
-    boolean estTrie();
+    boolean contient(final T val);
+    Set<T> valeurs();
 }

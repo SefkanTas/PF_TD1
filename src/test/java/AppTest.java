@@ -78,6 +78,7 @@ public class AppTest {
         assertEquals(contenu, arbre3().valeurs());
     }
 
+    /*
     @Test public void testValeur() {
         assertEquals(null, arbre0().somme());
         assertEquals((Integer) 6, arbre1().somme());
@@ -105,5 +106,5 @@ public class AppTest {
         assertFalse(arbre2().estTrie());
         assertFalse(arbre3().estTrie());
     }
-
+*/
 }
